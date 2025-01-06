@@ -1,0 +1,53 @@
+* {
+box-sizing: border-box;
+padding:0px;
+margin:0px;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  display:flex;
+  gap:1em;
+  background-color: black;
+  
+}
+
+#inventory {
+  width: 205px;
+  height: 102px;
+  border-style: solid;
+  border-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding:0px;
+}
+
+#chest-inventory{
+  width: 255px;
+  height: 203px;
+  border-color: white;
+  border-width: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding:0px;
+}
+
+.inventory-slot {
+  width: 50px;
+  height: 50px;
+  border-style: solid;
+  border-color: white;
+  margin:0px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
