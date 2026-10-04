@@ -207,6 +207,8 @@ let greenWidth;
 
 updateStats()
 
+myprint("")
+
 
 //draws the things on the canvas
 function draw() {
