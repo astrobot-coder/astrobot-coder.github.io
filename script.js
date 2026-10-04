@@ -104,6 +104,29 @@ var nexty
 var canvasWIDTH = 400
 var canvasHEIGHT = 400
 
+function showBattleCanvas() {
+  const widthOffset = 400 - canvasWIDTH
+  canvasWIDTH = 400
+  canvasHEIGHT = 400
+  resizeCanvas(canvasWIDTH, canvasHEIGHT)
+  relocateEquipmentsForLevel(widthOffset, 0)
+}
+
+function showMapCanvas() {
+  const mapCanvasSizes = {
+    1: [400, 400],
+    2: [500, 500],
+    3: [600, 600],
+    4: [250, 400],
+  }
+  const [mapWidth, mapHeight] = mapCanvasSizes[LEVEL]
+  const widthOffset = mapWidth - canvasWIDTH
+  canvasWIDTH = mapWidth
+  canvasHEIGHT = mapHeight
+  resizeCanvas(canvasWIDTH, canvasHEIGHT)
+  relocateEquipmentsForLevel(widthOffset, 0)
+}
+
 // images
 function preload() {
   map1()
@@ -128,15 +151,7 @@ function monsterEncounter() {
 
   if (battleChance == 5){
     INBATTLE=true
-    canvasWIDTH = 400
-    canvasHEIGHT = 400
-    resizeCanvas(canvasWIDTH, canvasHEIGHT)
-    if (LEVEL == 2){
-
-      relocateEquipmentsForLevel(-100, 0)
-    } else if (LEVEL == 3){
-      relocateEquipmentsForLevel(-200, 0)
-    }
+    showBattleCanvas()
     
     closeInventory()
     //pick a random enemy ansd copy their bases into the enemy_stats dictionary
@@ -491,19 +506,7 @@ function keyPressed() {
         // when enemy is defeated
         if (enemy_stat["hp"] <= 0){
           INBATTLE = false
-          if (LEVEL == 2){
-            canvasWIDTH = 500
-            canvasHEIGHT = 500
-            resizeCanvas(canvasWIDTH, canvasHEIGHT)
-            relocateEquipmentsForLevel(100, 0)
-
-          } else if (LEVEL == 3){
-            canvasWIDTH = 600
-            canvasHEIGHT = 600
-            resizeCanvas(canvasWIDTH, canvasHEIGHT)
-            relocateEquipmentsForLevel(200, 0)
-
-          } 
+          showMapCanvas()
           try {
             myprint(`You defeated the ${MONSTER_STATS[enemy_name]["name"]}`)
           }catch(e){
@@ -548,18 +551,7 @@ function keyPressed() {
          // when enemy is defeated
           if (enemy_stat["hp"] <= 0){
             INBATTLE = false
-            if (LEVEL == 2){
-              canvasWIDTH = 500
-              canvasHEIGHT = 500
-              resizeCanvas(canvasWIDTH, canvasHEIGHT)
-              relocateEquipmentsForLevel(100, 0)
-
-            } else if (LEVEL == 3){
-              canvasWIDTH = 600
-              canvasHEIGHT = 600
-              resizeCanvas(canvasWIDTH, canvasHEIGHT)
-              relocateEquipmentsForLevel(200, 0)
-            }
+            showMapCanvas()
 
             try {
               myprint(`You defeated the ${MONSTER_STATS[enemy_name]["name"]}`)
@@ -671,15 +663,7 @@ function keyPressed() {
       enemy_stat["money"] = BOSS_STATS[enemy_name]["money"]
       enemy_stat["pwr"] = BOSS_STATS[enemy_name]["pwr"]
       
-      canvasWIDTH = 400
-      canvasHEIGHT = 400
-      resizeCanvas(canvasWIDTH, canvasHEIGHT)
-      
-      if (LEVEL == 2){
-        relocateEquipmentsForLevel(-100, 0)
-      } else if (LEVEL == 3){
-        relocateEquipmentsForLevel(-200, 0)
-      }
+      showBattleCanvas()
 
       return
     
@@ -777,18 +761,7 @@ function mouseClicked(){
 
     if (percent <= runChance*100 ){
       INBATTLE=false
-      if (LEVEL == 2){
-        canvasWIDTH = 500
-        canvasHEIGHT = 500
-        resizeCanvas(canvasWIDTH, canvasHEIGHT)
-        relocateEquipmentsForLevel(100, 0)
-
-      } else if (LEVEL == 3){
-        canvasWIDTH = 600
-        canvasHEIGHT = 600
-        resizeCanvas(canvasWIDTH, canvasHEIGHT)
-        relocateEquipmentsForLevel(200, 0)
-      }
+      showMapCanvas()
 
       myprint("You ran from the fight.")
       updateStats()

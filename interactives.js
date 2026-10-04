@@ -744,12 +744,19 @@ function relocateEquipmentsForLevel(widthOffset, heightOffset){
 	for (let i = 0; i < inventory.length; i++) {
 		
 		let item = document.getElementById(inventory[i])
+		if (!item) {
+			continue
+		}
 		console.log("item:", item)
 	
-		let prev_left = item.style.left
-		let prev_top = item.style.top
+		let prev_left = parseFloat(item.style.left)
+		let prev_top = parseFloat(item.style.top)
 
-		item.style.left = (parseInt(prev_left) + widthOffset) +"px"
-		item.style.top = (parseInt(prev_top) + heightOffset) +"px"
+		if (Number.isFinite(prev_left)) {
+			item.style.left = (prev_left + widthOffset) +"px"
+		}
+		if (Number.isFinite(prev_top)) {
+			item.style.top = (prev_top + heightOffset) +"px"
+		}
 	}
 }
