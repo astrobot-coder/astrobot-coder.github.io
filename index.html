@@ -7,63 +7,166 @@
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="shop.css" rel="stylesheet" type="text/css" />
+  <link href="playerstats.css" rel="stylesheet" type="text/css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 
-  <canvas id="gamedisplay"></canvas>
-  <div id ="debugmode">
-  </div>
 
-  <div id="equipment"> 
+
+  <div id ="row1">
+    <div>
+      <canvas id="gamedisplay"></canvas>
+    </div>
+    <!-- <div id ="debugmode"></div>-->
+    <!-- inventory div --->  
+
+    <div>
+      <div id = "playerinfo">
+        <div id = "notmoneyinfo">
+          <div id="playerstats">
+            <table>
   
+              <tr>
+                <th>STAT</th>
+                <th>LEVEL</th>
+              </tr>
+  
+              <tr>
+                <td>HP:</td>
+                <td id ="hp"></td>
+              </tr>
+  
+              <tr>
+                <td>STR:</td>
+                <td id ="str"></td>
+              </tr>
+  
+              <tr>
+                <td>DEF:</td>
+                <td id="def"></td>
+              </tr>
+  
+              <tr>
+                <td>SPD:</td>
+                <td id="spd"></td>
+              </tr>
+  
+              <tr>
+                <td>CHR:</td>
+                <td id ="chr"></td>
+              </tr>
+  
+  
+  
+            </table>
+          </div>
+  
+          <div id='playerequipment'>
+              <div class ="equipment_slot"  id="hat"> hat</div>
+              <div class ="equipment_slot"  id="torso">torso</div>
+              <div class ="equipment_slot"  id="pants">pants</div>
+              <div class ="equipment_slot" id="hand">hand</div>
+              <div class ="equipment_slot"  id="shoes">shoes</div>
+          </div>
+  
+        </div>
+  
+        <div id = "moneyinfo">
+          <div>
+            <p><span id = "playermoney"></span> rb</p>
+          </div>
+        </div>
+  
+      </div>
+      <div>      
+        <div id="trash"></div>
+        <p style="color:white;font-family: pixelify sans;" >Drag & Drop</p>
+      </div>
+    </div>
+
+    
+
+    <div id = "bag">
+      
+      <div id="inventory"> 
+       <!-- <div class = "inventory-slot" id = "i1"> </div> --->
+      </div>
+
+      <div id = inventory-weight-container>
+        
+        <div id="inventory-weight">
+           <!-- <div class = "inventory-slot" id = "i1"> </div> --->
+        </div>
+        
+      </div>
+      
+      <div id = "chest-inventory">
+       <!-- <div class = "inventory-slot" id = "chest1"> </div> -->
+      </div>
+      
+    </div>
+    
+
+  
+    <div id="messageconsole">
+      
+    </div>
   </div>
 
-  <div id="inventory"> 
-   <div class = "inventory-slot" id = "i1"> </div>
-   <div class = "inventory-slot" id = "i2"> </div>
-   <div class = "inventory-slot" id = "i3"> </div>
-   <div class = "inventory-slot" id = "i4"> </div>
+  
+  <!--  <div id="shop"></div> -->
 
-   <div class = "inventory-slot" id = "i5"> </div>
-   <div class = "inventory-slot" id = "i6"> </div>
-   <div class = "inventory-slot" id = "i7"> </div>
-   <div class = "inventory-slot" id = "i8"> </div>
+  <div id="row2">
+    
+
+    <div id = "shop">
+      <p id="shoptitle">SHOP</p>
+      <!-- <div class = "shoplisting">
+
+      < div class = "right"> 
+        <p>  name </p>
+         <div class = "shopimage"> </div>
+      </div>
+
+      <div class =" left"> 
+        <p class = "shopprice"> 5 rb </p>
+        <p class = "shopdescription"> Common sword. Nothing special</p>
+      </div>
+
+      </div> -->
+      
+    </div>
     
   </div>
 
-  <div id = "chest-inventory">
-   <div class = "inventory-slot" id = "chest1"> </div>
-   <div class = "inventory-slot" id = "chest2"> </div>
-   <div class = "inventory-slot" id = "chest3"> </div>
-   <div class = "inventory-slot" id = "chest4"> </div>
-   <div class = "inventory-slot" id = "chest5"> </div>
 
-   <div class = "inventory-slot" id = "chest6"> </div>
-   <div class = "inventory-slot" id = "chest7"> </div>
-   <div class = "inventory-slot" id = "chest8"> </div>
-   <div class = "inventory-slot" id = "chest9"> </div>
-   <div class = "inventory-slot" id = "chest10"> </div>
-
-   <div class = "inventory-slot" id = "chest11"> </div>
-   <div class = "inventory-slot" id = "chest12"> </div>
-   <div class = "inventory-slot" id = "chest13"> </div>
-   <div class = "inventory-slot" id = "chest14"> </div>
-   <div class = "inventory-slot" id = "chest15"> </div>
-    
-   <div class = "inventory-slot" id = "chest16"> </div>
-   <div class = "inventory-slot" id = "chest17"> </div>
-   <div class = "inventory-slot" id = "chest18"> </div>
-   <div class = "inventory-slot" id = "chest19"> </div>   
-   <div class = "inventory-slot" id = "chest20"> </div>
+  
+  <div id="hoverbox">
+    <!-- INSIDE the tag will contain item of the item we're hovering over -->
   </div>
-    
+  
+  <script src="loadassets.js"></script>
+  <script src="consumable.js"></script>
+  <script src="map.js"></script>
+  <script src ="data.js"></script>
   <script src="player.js"></script>
   <script src = "interactives.js"></script>
-  <script src="map.js"></script>
   <script src="script.js"></script>
+  <script src = "shop.js"></script>
 
-</body>
+  <script>
+
+    
+  </script>
+  
+
+</body>  
 
 </html>

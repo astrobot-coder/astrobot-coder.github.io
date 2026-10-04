@@ -1,0 +1,73 @@
+#shop{
+  display:none;
+  border-color: white;
+  border-style: solid;
+  overflow-y: auto;
+  max-height:500px;
+  margin-left: 1em;
+}
+
+#shoptitle{
+  color:white;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.right{
+  direction: flex;
+  margin-right: 1em;
+}
+
+.left{
+  direction: flex;
+}
+
+.buybutton{
+  border-style: solid;
+  border-color: white;
+  background-color: black;
+  color: white;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.buybutton:hover{
+  color:lightgreen;
+}
+
+.shoplisting{
+  width: 100%;
+  display: flex;
+  padding:1em;
+  margin:2px;
+  border-style: groove;
+}
+
+.shopprice{
+  color: white;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.shopimage{
+  height: 40px;
+  width: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top:5px;
+  margin-bottom: 5px;
+}
+
+.shopname{
+  color:white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.shopdescription{
+  color:white;
+}
+
+.shopstats{
+  color:white;
+}

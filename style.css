@@ -14,40 +14,139 @@ body {
   display:flex;
   gap:1em;
   background-color: black;
-  
+  flex-wrap: wrap;
+  flex-direction:column;
+  overflow-y: hidden;
 }
+
+#row1{
+  display: flex;
+}
+
+#row2{
+  display: flex;
+}
+
 
 #inventory {
-  width: 205px;
-  height: 102px;
+  width: 400px;
+  min-width: 400px;
+  max-width: 400px;
+  height: 300px;
+  min-height: 300px;
+  max-height: 300px;
   border-style: solid;
-  border-color: white;
-  display: flex;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-  padding:0px;
-}
-
-#chest-inventory{
-  width: 255px;
-  height: 203px;
   border-color: white;
   border-width: 3px;
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
   padding:0px;
+  margin-right: 2px;
+  margin-top: 2px;
+  margin-left: 2px;
+}
+
+#inventory-weight-container{
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  min-width:400px;
+}
+
+
+#inventory-weight {
+  height: 1em;
+  width: 0%;
+  background-color: gray;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+#chest-inventory{
+  width: 400px;
+  height: 300px;
+  background: #5c4033; /* Dark wood base */
+  padding: 15px; /* Creates the outer thick frame border */
+  box-shadow: 
+    inset 0 0 10px rgba(0, 0, 0, 0.8), 
+    0 4px 8px rgba(0, 0, 0, 0.5);
+  border: 2px solid #3a2517;
+  border-radius: 4px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  display: none;
+  margin: 2px;
 }
 
 .inventory-slot {
-  width: 50px;
-  height: 50px;
-  border-style: solid;
-  border-color: white;
-  margin:0px;
+  width: 40px;
+  height: 40px;
+  margin: 0px;
   box-sizing: border-box;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
+#messageconsole {
+  width:500px;
+  max-width: 500px;
+  min-width: 500px;
+  height: 300px;
+  max-height: 300px;
+  min-height: 300px;
+  border-style: solid;
+  border-color: white;
+  overflow: scroll;
+  margin: 2px;
+}
+
+.message{
+  font-family: pixelify sans;
+}
+
+.normal{
+  color:white;
+}
+
+.warning{
+  color: yellow;
+}
+
+.help{
+  color: lawngreen;
+}
+
+.danger{
+  color: red;
+}
+
+
+#trash{
+  background-image: url("assets/trashcan.png");
+  max-width: 100px;
+  max-height: 100px;
+  min-height: 100px;
+  min-width: 100px;
+  background-position: center;
+  background-size: cover;
+  margin-top: 25px;
+}
+
+
+/* hoverbox css  */
+
+#hoverbox{
+  display:block;
+  
+  opacity: 0;
+  border:solid;
+  border-color: white;
+  color:white;
+  background-color: rgb(0,0,0,0.5);
+  transition: opacity 0.2s;
+  transition-timing-function: ease-in;
+
+}

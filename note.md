@@ -1,6 +1,0 @@
-inventory
-
-hold weapons
-
-
-  
