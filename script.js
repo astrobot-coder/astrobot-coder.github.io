@@ -207,7 +207,12 @@ let greenWidth;
 
 updateStats()
 
-myprint("")
+myprint("Hello and Welcome to my game!");
+myprint("To move, use arrow keys or wasd.");
+myprint("To intereact with things, use the F key");
+myprint("During a battle, click the action you want and press space.");
+myprint("Double click potions to use them, and drag and drop equipment to your equipment slots to equip them.");
+myprint("I hope you enjoy this game!");
 
 
 //draws the things on the canvas
@@ -688,10 +693,12 @@ function keyPressed() {
 
   
     if ( (LEVEL < 4) && 
-        (keyCode == 87 || keyCode == 83 ||
-        keyCode == 65 || keyCode == 68 || 
-         RIGHT_ARROW || LEFT_ARROW || 
-         DOWN_ARROW || UP_ARROW ) 
+        (  keyCode == 87 || keyCode == 83 ||
+           keyCode == 65 || keyCode == 68 || 
+           keyCode == RIGHT_ARROW || keyCode == LEFT_ARROW || 
+           keyCode == DOWN_ARROW || keyCode == UP_ARROW 
+        ) 
+         && INBATTLE == false 
        ){
         monsterEncounter()
     }

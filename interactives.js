@@ -714,14 +714,6 @@ function openInventory(item = null, inv = null, map = null, x = null, y = null) 
 	let bag = document.getElementById("bag")
 
 
-	// if (inventoryState == "closed") {
-	// 	inventoryState = "opened"
-	// 	bag.style.display = "block"
-
-	// 	//go through all the items in the player's inventory and hide them
-	// 	for (let i = 0; i < inventory.length; i++) {
-	// 		document.getElementById(inventory[i]).style.display = "block"
-	// 	}
 		
 	if (inventoryState == "opened") {
 		inventoryState = "closed"
