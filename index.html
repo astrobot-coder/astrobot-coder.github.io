@@ -21,85 +21,97 @@
 
 <body>
 
+  <div id = "p5_loading" style = "color:white">
+    <div id = "loadcontent">
+      <p>loading...</p>
+      <div id="loadingbar">
+        <div id="loadingprog"> </div>
+      </div>
+    </div>
+
+  </div>
 
 
 
   <div id ="row1">
-    <div>
-      <canvas id="gamedisplay"></canvas>
-    </div>
-    <!-- <div id ="debugmode"></div>-->
-    <!-- inventory div --->  
 
-    <div>
-      <div id = "playerinfo">
-        <div id = "notmoneyinfo">
-          <div id="playerstats">
-            <table>
-  
-              <tr>
-                <th>STAT</th>
-                <th>LEVEL</th>
-              </tr>
-  
-              <tr>
-                <td>HP:</td>
-                <td id ="hp"></td>
-              </tr>
-  
-              <tr>
-                <td>STR:</td>
-                <td id ="str"></td>
-              </tr>
-  
-              <tr>
-                <td>DEF:</td>
-                <td id="def"></td>
-              </tr>
-  
-              <tr>
-                <td>SPD:</td>
-                <td id="spd"></td>
-              </tr>
-  
-              <tr>
-                <td>CHR:</td>
-                <td id ="chr"></td>
-              </tr>
-  
-  
-  
-            </table>
-          </div>
-  
-          <div id='playerequipment'>
-              <div class ="equipment_slot"  id="hat"> hat</div>
-              <div class ="equipment_slot"  id="torso">torso</div>
-              <div class ="equipment_slot"  id="pants">pants</div>
-              <div class ="equipment_slot" id="hand">hand</div>
-              <div class ="equipment_slot"  id="shoes">shoes</div>
-          </div>
-  
-        </div>
-  
-        <div id = "moneyinfo">
-          <div>
-            <p><span id = "playermoney"></span> rb</p>
-          </div>
-        </div>
-  
-      </div>
-      <div>      
-        <div id="trash"></div>
-        <p style="color:white;font-family: pixelify sans;" >Drag & Drop</p>
-      </div>
-    </div>
 
+    <div id ="upper">  
+      
+      <div>
+        <canvas id="gamedisplay"></canvas>
+      </div>
+
+      
+      <div>
+        <div id = "playerinfo">
+          <div id = "notmoneyinfo">
+            <div id="playerstats">
+              <table>
     
+                <tr>
+                  <th>STAT</th>
+                  <th>LEVEL</th>
+                </tr>
+    
+                <tr>
+                  <td>HP:</td>
+                  <td id ="hp"></td>
+                </tr>
+    
+                <tr>
+                  <td>STR:</td>
+                  <td id ="str"></td>
+                </tr>
+    
+                <tr>
+                  <td>DEF:</td>
+                  <td id="def"></td>
+                </tr>
+    
+                <tr>
+                  <td>SPD:</td>
+                  <td id="spd"></td>
+                </tr>
+    
+                <tr>
+                  <td>CHR:</td>
+                  <td id ="chr"></td>
+                </tr>
+    
+    
+    
+              </table>
+            </div>
+    
+            <div id='playerequipment'>
+                <div class ="equipment_slot"  id="hat"> hat</div>
+                <div class ="equipment_slot"  id="torso">torso</div>
+                <div class ="equipment_slot"  id="pants">pants</div>
+                <div class ="equipment_slot" id="hand">hand</div>
+                <div class ="equipment_slot"  id="shoes">shoes</div>
+            </div>
+    
+          </div>
+    
+          <div id = "moneyinfo">
+            <div>
+              <p><span id = "playermoney"></span> rb</p>
+            </div>
+          </div>
+    
+        </div>
 
-    <div id = "bag">
+        <div>      
+          <div id="trash"></div>
+          <p style="color:white;font-family: pixelify sans;" >Drag & Drop</p>
+        </div>
+      </div> 
+
+      <div id = "bag">
       
       <div id="inventory"> 
+        <p class="title">Inventory</p>
        <!-- <div class = "inventory-slot" id = "i1"> </div> --->
       </div>
 
@@ -111,17 +123,25 @@
         
       </div>
       
-      <div id = "chest-inventory">
-       <!-- <div class = "inventory-slot" id = "chest1"> </div> -->
-      </div>
+
       
-    </div>
+      </div> <!-- /bag -->
+    
+  
+    </div> <!--/upper-->
     
 
-  
-    <div id="messageconsole">
-      
-    </div>
+    <div id="lower">
+        <div id="messageconsole"></div>  
+    </div>     
+
+
+    
+
+
+
+
+
   </div>
 
   
@@ -129,6 +149,10 @@
 
   <div id="row2">
     
+    <div id = "chest-inventory">
+      <p class="title">Chest</p>
+       <!-- <div class = "inventory-slot" id = "chest1"> </div> -->
+    </div>
 
     <div id = "shop">
       <p id="shoptitle">SHOP</p>
@@ -162,8 +186,10 @@
   <script src ="data.js"></script>
   <script src="player.js"></script>
   <script src = "interactives.js"></script>
+  <script src = "loading.js"></script>
   <script src="script.js"></script>
   <script src = "shop.js"></script>
+
 
   <script>
 
