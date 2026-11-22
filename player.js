@@ -12,11 +12,11 @@ playerStats = {
   "py":py,
   "hp":20,
   "maxhp":20,
-  "str":1,
-  "def":3,
-  "spd":2,
-  "chr":0,
-  "pwr":5
+  "str":10,
+  "def":30,
+  "spd":20,
+  "chr":10,
+  "pwr":50
 }
 
 playerEquipmentStats = {

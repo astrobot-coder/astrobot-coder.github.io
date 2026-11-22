@@ -15,6 +15,9 @@ var interact_functions = {
 	"pants1": pickupItem,
 	"helmet1": pickupItem,
 	"🚪": nextLevel,
+	"mossstairup": nextLevel,
+	"fancystairup": nextLevel,
+	"fencevertbroken1": nextLevel,
 
 	//level 2
 	"p4": pickupItem,
@@ -49,11 +52,11 @@ function nextLevel(item, inv, map, x, y) {
 		
 		playerStats["hp"] = 30
 		playerStats["maxhp"] = 30
-		playerStats["str"] = 2
-		playerStats["def"] = 3
-		playerStats["spd"] = 3
-		playerStats["chr"] = 1
-		playerStats["pwr"] = 6
+		playerStats["str"] = 20
+		playerStats["def"] = 30
+		playerStats["spd"] = 30
+		playerStats["chr"] = 10
+		playerStats["pwr"] = 60
 		relocateEquipmentsForLevel(100, 0)
 
 		
@@ -62,19 +65,19 @@ function nextLevel(item, inv, map, x, y) {
 		canvasWIDTH = 600
 		canvasHEIGHT = 600
 		resizeCanvas(canvasWIDTH, canvasHEIGHT)
-		playerStats["px"] = 0
-		playerStats["py"] = 0
+		playerStats["px"] = 1
+		playerStats["py"] = 1
 		LEVELMAP = MAP3
 		LEVELFORE = MAP3OVERLAY
 		blackGhostPosition()
 
 		playerStats["hp"] = 40
 		playerStats["maxhp"] = 40
-		playerStats["str"] = 5
-		playerStats["def"] = 4
-		playerStats["spd"] = 4
-		playerStats["chr"] = 2
-		playerStats["pwr"] = 7
+		playerStats["str"] = 50
+		playerStats["def"] = 40
+		playerStats["spd"] = 40
+		playerStats["chr"] = 20
+		playerStats["pwr"] = 70
 
 		let body = document.getElementsByTagName("body")[0]
 		body.style.background = "rgb(49,0,71);"

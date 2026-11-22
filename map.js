@@ -17,13 +17,13 @@ var MAPOVERLAY = [
   ["p2", "", "p2", "🧰", "", "", "", ""],
   ["", "", "", "", "", "", "", "🏪"],
   ["", "", "👻", "p3", "", "", "", ""],
-  ["", "", "", "📏", "", "", "🐐", "🚪"]
+  ["", "", "", "📏", "", "", "🐐", "mossstairup"]
 ]
 
 
 
 var MAP2 = [
-  ["gt", "gt", "1horleftmoss", "1toprightcornermoss", "gt", "gt", "gt", "gt", "gt", "gt"],
+  ["mossstairdown", "gt", "1horleftmoss", "1toprightcornermoss", "gt", "gt", "gt", "gt", "gt", "gt"],
   ["1verttopmoss", "gt", "gt", "1vertbottommoss", "gt", "gt", "gt", "gt", "gt", "gt"],
   ["1bottomleftcornermoss", "1toprightcornermoss", "gt", "gt", "gt", "gt", "water1", "water2", "gt", "gt"],
   ["gt", "1vertbottommoss", "gt", "gt", "water2", "water2", "water1", "water2", "gt", "gt"],
@@ -36,7 +36,7 @@ var MAP2 = [
 ]
 
 var MAP2OVERLAY = [
-  ["", "", "", "", "", "tr1", "tr1", "", "bear", "🏪"],
+  ["", "leftcaveedge", "", "", "", "tr1", "tr1", "", "bear", "🏪"],
   ["", "", "", "", "tr1", "pathtopleftcorner", "pathhormidtexture", "pathhorright", "", "tr1"],
   ["", "", "", "pathtopleftcorner", "pathhormidtexture", "pathbottomrightcorner", "watertopleft", "watertopright", "", ""],
   ["tr1", "", "pathtopleftcorner", "pathbottomrightcorner", "watertopleft", "watertopmid", "watertopleftcorner", "watermidright", "", "tr1"],
@@ -45,7 +45,7 @@ var MAP2OVERLAY = [
   ["", "", "pathvertmidtexture", "waterbottomleft", "waterbottomright", "", "treetopleft", "treetopmiddle", "treetopmiddle", "treetopright"],
   ["", "", "pathbottomleftcorner", "pathhormidtexture", "pathhormidtexture", "pathtoprightcorner", "treeleft", "treemiddle", "treemiddle", "treeright"],
   ["", "gobking", "bottomgrassedge", "", "tr1", "pathvertmidtexture", "treebottomleft", "treebottommiddle", "treebottommiddle", "treebottomright"],
-  ["dagger1", "", "", "", "", "pathbottomleftcorner", "pathhorright", "", "spart", "🚪"],
+  ["dagger1", "", "", "", "", "pathbottomleftcorner", "pathhorright", "", "spart", "fencevertbroken1"],
 ]
 
 var MAP3 = [
@@ -64,9 +64,9 @@ var MAP3 = [
 ]
 
 var MAP3OVERLAY = [
-  ["", "", "", "", "", "", "crackendbottom", "lt4", "lt5", "keg1", "lt4", "lt5"],
-  ["", "", "", "", "", "", "", "ge", "", "", "v4", "tor1"],
-  ["🏪", "", "", "", "", "", "crackendtop", "ge", "buc1", "", "", "hay"],
+  ["fenceupleftcorner", "fencehormid", "fencehormid", "fencehormid", "fencehormid", "fencehormid", "crackendbottom", "lt4", "lt5", "keg1", "lt4", "lt5"],
+  ["fencevertbroken2", "", "", "", "", "", "", "ge", "", "", "v4", "tor1"],
+  ["fencevertmid", "🏪", "", "", "", "", "crackendtop", "ge", "buc1", "", "", "hay"],
   ["", "", "", "", "", "", "", "", "", "owd", "", ""],
   ["v3", "", "", "", "", "", "bluespart", "", "", "", "", "tor1"],
   ["v5", "", "sc", "sc", "sc", "sc", "sc", "sc", "sc", "sc", "", "v5"],
@@ -74,8 +74,8 @@ var MAP3OVERLAY = [
   ["tor2", "yellowspart", "", "", "", "", "", "", "", "", "", "tor2"],
   ["", "dd", "", "", "", "", "", "", "", "ld", "", ""],
   ["", "sk4", "", "", "sk2", "sw3", "crackendbottom", "tor1", "", "", "", "tor2"],
-  ["", "", "", "sk6", "sk5", "", "", "skelegolem", "", "", "", ""],
-  ["sw4", "sk7", "", "sk3", "", "sw2", "crackendtop", "tor2", "🏪", "", "", "🚪"]
+  ["", "", "", "sk6", "sk5", "", "", "skelegolem", "", "", "", "fancystairup"],
+  ["sw4", "sk7", "", "sk3", "", "sw2", "crackendtop", "tor2", "🏪", "", "", ""]
 ]
 
 var MAP4 = [

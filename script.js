@@ -78,7 +78,8 @@ var collidables= ["w1", "w2", "w3", "mw1", "mw2", "b3",
                   "2horrightcave","treetopleft", "treetopmiddle", "treetopmiddle", "treetopright",
                   "treeleft", "treemiddle", "treemiddle", "treeright",
                   "treebottomleft", "treebottommiddle","treebottomright" ,
-                  "water2", "water1","2toprightcornercave",
+                  "water2", "water1","2toprightcornercave", 
+                  "fencehormid", "fencevertmid", "fencevertbroken2",
 
 
                   
@@ -91,7 +92,7 @@ var interactions= ["🏪", "🧰", "📏", "🚪",
                    "helmet1", "p4", "p5", "p6", "dagger1",
                    "dagger2"," axe1", "shield1", "gloves2",
                    "helmet2", "cloak2", "armor2", "pants2", 
-                   "boot3",
+                   "boot3", "mossstairup", "fancystairup", "fencevertbroken1",
                   ]
 
 // player data :
@@ -175,6 +176,8 @@ function monsterEncounter() {
 
 //displays drawn canvas
 const gamedisplay = document.getElementById("gamedisplay")
+
+
 
 function setup() {
   createCanvas(canvasWIDTH, canvasWIDTH, gamedisplay);
@@ -371,13 +374,18 @@ function draw() {
             
             let back = LEVELMAP[i][j]
             let fore = LEVELFORE[i][j]
-            // console.log("back",back, "pos number", i, j)
-            // console.log("fore",fore, "pos number:",i, j)
+
 
             //background tile
-            image(IMG[back], j*size, i*size, size, size)
-
-
+            if (back== "mossstairdown"){
+              push()
+              scale(-1,1)
+              image(IMG[back], -j*size-size , i*size, size, size)
+              pop()
+            }else{
+              image(IMG[back], j*size, i*size, size, size)
+            }
+            
             //foreground items / interactives
             if (fore != ""){
               image(IMG[fore], j*size, i*size, size, size)
